@@ -207,6 +207,7 @@
                                         </state>
                                         <connections>
                                             <action selector="btnDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHx-IX-cPY"/>
+                                            <action selector="btnNumberInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myk-8u-rzi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3d-lV-kgX">

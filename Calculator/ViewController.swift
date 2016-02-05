@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     //This method fires when a number is pressed, it sets the current number to whatever the user is sending through this method. Then procedes to set the label to the current number.
     @IBAction func btnNumberInput(sender: UIButton) {
         //sets the current number to what is sent
-        currentNum = currentNum * 10 + Float(Int(sender.titleLabel!.text!)!)
+        currentNum = currentNum * 10 + Float(sender.currentTitle!)!
         //sets the result label to the current number
         lblResult.text = ("\(currentNum)")
     }
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
                 result = result * currentNum
             case "/":
                 result = result / currentNum
-            //default switch case if none are available
+            //default switch case if none are available.
         default:
                 print("error")
         }
