@@ -15,8 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblResult: UILabel!
     var result = Float()
     var currentNum = Float()
+    var currentNumString = String()
     var currentOp = String()
-    
+    var labelString = String()
+    var storedNum = Float()
+    var currentOperation = String()
     
     //function that fires automatically when the view loads, set up environment and iniate variables
     override func viewDidLoad() {
@@ -35,7 +38,21 @@ class ViewController: UIViewController {
     //This method fires when a number is pressed, it sets the current number to whatever the user is sending through this method. Then procedes to set the label to the current number.
     @IBAction func btnNumberInput(sender: UIButton) {
         //sets the current number to what is sent
-        currentNum = currentNum * 10 + Float(sender.currentTitle!)!
+        //currentNum = currentNum * 10 + Float(sender.currentTitle!)!
+        
+        labelString = lblResult.text!
+        
+        
+        if(labelString == "0"){
+            currentNumString = sender.currentTitle!
+        }
+        else{
+            currentNumString = currentNumString + sender.currentTitle!
+        }
+        currentNum = Float(currentNumString)!
+        print("\ncurrent num: ");print(currentNum)
+        print("\nStored Num: ");print(result)
+        print("\nResult: ");print(result)
         //sets the result label to the current number
         lblResult.text = ("\(currentNum)")
     }
@@ -43,45 +60,88 @@ class ViewController: UIViewController {
     
     //This method fires when an operation button is pressed. Each case will fire when the appropriate sign is clicked. Then sets the result label to the result.
     @IBAction func btnOperation(sender: UIButton) {
+        
+        //sets the current Operation to what is clicked
+        currentOp = sender.currentTitle!
         switch currentOp{
             //all the math is done here
             case "=":
-                result = currentNum
+                //if statements to check what the current operation was for the equation
+                if(currentOperation == "+"){
+                    //sets the result to num1 + num2
+                    result = storedNum + currentNum
+                    //sets the currentNum to the result in case the user wants to append math functions on the equation
+                    currentNum = result
+                }
+                else if(currentOperation == "-"){
+                    result = storedNum - currentNum
+                    currentNum = result
+            }
+                else if(currentOperation == "*"){
+                    result = storedNum * currentNum
+                    currentNum = result
+            }
+                else if(currentOperation == "/"){
+                    result = storedNum / currentNum
+                    currentNum = result
+                }else{
+                    print("error")
+                    lblResult.text = ("err")
+            }
+            
             case "+":
-                result = result + currentNum
+                //sets the current operation for the math function
+                currentOperation = "+"
+                //sets a stored num, so the second num memery space is clear
+                storedNum = currentNum
+                //rests the currentNum so a new value can be placed in the memory space
+                currentNumString = "0"
+                currentNum = 0
+            
             case "-":
-                result = result - currentNum
+                currentOperation = "-"
+                storedNum = currentNum
+                currentNumString = "0"
+                currentNum = 0
+            
             case "*":
-                result = result * currentNum
+                currentOperation = "*"
+                storedNum = currentNum
+                currentNumString = "0"
+                currentNum = 0
+            
             case "/":
-                result = result / currentNum
+                currentOperation = "/"
+                storedNum = currentNum
+                currentNumString = "0"
+                currentNum = 0
+            
+            
             //default switch case if none are available.
         default:
                 print("error")
         }
         
-        currentNum = 0
+        //currentNumString = "0"
+        //currentNum = 0
         lblResult.text = ("\(result)")
         
-        if(sender.titleLabel!.text == "="){
-            result = 0
-        }
+        //if(sender.titleLabel!.text == "="){
+        //    result = 0
+        //}
         //sets the current operation to what is sent through the method
         currentOp = sender.titleLabel!.text! as String!
     }
     
-    //When the user clicks the decimal button it appens the decimal and waits for the next number.
-    @IBAction func btnDecimal(sender: UIButton) {
-        //to do
-        
-        
-    }
+    
     //resets all variables to initial values, and clears the label		
     @IBAction func btnClear(sender: UIButton) {
         result = 0
         currentNum = 0
         currentOp = "="
         lblResult.text = ("\(result)")
+        currentNumString = "0"
+        
     }
 }
 

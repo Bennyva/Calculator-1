@@ -12,7 +12,6 @@
 		3F145FCF1C62D8850058F9E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F145FCD1C62D8850058F9E6 /* Main.storyboard */; };
 		3F145FD11C62D8850058F9E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F145FD01C62D8850058F9E6 /* Assets.xcassets */; };
 		3F635F721C65019A0088C528 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F635F711C65019A0088C528 /* Launch Screen.storyboard */; };
-		3F635F741C6502260088C528 /* calculator-logo-icon-_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F635F731C6502260088C528 /* calculator-logo-icon-_2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		3F145FD01C62D8850058F9E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F145FD51C62D8850058F9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F635F711C65019A0088C528 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
-		3F635F731C6502260088C528 /* calculator-logo-icon-_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "calculator-logo-icon-_2x.png"; path = "../../../../Users/student/Downloads/calculator-logo-icon-_2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 				3F145FC91C62D8850058F9E6 /* AppDelegate.swift */,
 				3F145FCB1C62D8850058F9E6 /* ViewController.swift */,
 				3F145FCD1C62D8850058F9E6 /* Main.storyboard */,
-				3F635F731C6502260088C528 /* calculator-logo-icon-_2x.png */,
 				3F635F711C65019A0088C528 /* Launch Screen.storyboard */,
 				3F145FD01C62D8850058F9E6 /* Assets.xcassets */,
 				3F145FD51C62D8850058F9E6 /* Info.plist */,
@@ -128,7 +125,6 @@
 				3F635F721C65019A0088C528 /* Launch Screen.storyboard in Resources */,
 				3F145FD11C62D8850058F9E6 /* Assets.xcassets in Resources */,
 				3F145FCF1C62D8850058F9E6 /* Main.storyboard in Resources */,
-				3F635F741C6502260088C528 /* calculator-logo-icon-_2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
